@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <ServerGarbageCollection>True</ServerGarbageCollection>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>True</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <PackageReference Include="Microsoft.ServiceFabric" />
+    <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" />
+    <PackageReference Include="Microsoft.ServiceFabric.Data" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" />
+    <PackageReference Include="Newtonsoft.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StorageService\StorageService.csproj" />
+  </ItemGroup>
+</Project>
